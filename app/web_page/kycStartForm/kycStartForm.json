@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "b0caf0a4-fe75-4e88-934a-b1a229e08cd8",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1743734231598,
+  "lastUpdate" : 1743771908631,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -94,7 +94,7 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "this form is used to get to know a client"
+                  "value" : "this form is used to get to know a client {{ process.client_id_proc_var}}"
                 },
                 "alignment" : {
                   "type" : "constant",
@@ -352,7 +352,7 @@
                         },
                         "readOnly" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "label" : {
                           "type" : "interpolation",
@@ -371,7 +371,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "ballarat.client_ID"
+                          "value" : "{{process.client_id_proc_var}}"
                         },
                         "required" : {
                           "type" : "constant",
