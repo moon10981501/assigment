@@ -1,11 +1,66 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0">
     <businessObjects>
-        <businessObject qualifiedName="com.company.model.BusinessObject">
+        <businessObject qualifiedName="com.company.model.Ballarat">
             <fields>
-                <field type="STRING" length="255" name="attribute" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="testttinggg" nullable="true" collection="false"/>
-                <field type="FLOAT" length="255" name="attribute1" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="client_name" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="client_ID" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="nationality" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="phone_number" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="email_address" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="identification_type" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="identification_number" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="address" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="country_of_origin" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="occupation" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="employer_name" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="nature_of_bussiness" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="source_of_wealth" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="estimated_annual_income" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="estimated_net_worth" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="expected_pattern_of_transactions" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="expected_transaction_volume" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="is_politically_important" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="is_related_to_politically_important" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="politically_important_type" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="financial_goals" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="risk_tolerance" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="financial_experience" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="kyc_review_date" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="daily_transaction_limit" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="kyc_result" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="broker_name" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="broker_ID" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.MegaSalesSmasherRobot">
+            <fields>
+                <field type="LOCALDATE" length="255" name="date_signing" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="broker_name" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="broker_ID" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="client_ID" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="client_name" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="bonus_amount" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Slipstream">
+            <fields>
+                <field type="STRING" length="255" name="client_name" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="client_ID" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="hin_exist" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="hin_number" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="daily_transaction_limit" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="asset_transfer_requested" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="client_existing_broker" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="current_cash" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="broker_ID" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="trading_status" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>

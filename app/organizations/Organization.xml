@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="ASCII"?>
+<organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1">
+  <customUserInfoDefinitions/>
+  <users>
+    <user userName="User1">
+      <firstName>james</firstName>
+      <lastName>doe</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">123123</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="User2">
+      <firstName>mark</firstName>
+      <lastName>doe</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">123123</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="User3">
+      <firstName>adam</firstName>
+      <lastName>doe</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">123123</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="User4">
+      <firstName>fatima</firstName>
+      <lastName>doe</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">123123</password>
+      <customUserInfoValues/>
+    </user>
+  </users>
+  <roles>
+    <role name="kyc_team_member">
+      <displayName>KYC team member</displayName>
+    </role>
+    <role name="sales_team_member">
+      <displayName>Sales team member</displayName>
+    </role>
+    <role name="board_member">
+      <displayName>Board member</displayName>
+    </role>
+    <role name="operations_team_member">
+      <displayName>Operations team member</displayName>
+    </role>
+  </roles>
+  <groups>
+    <group name="kyc_departnment">
+      <displayName>KYC department</displayName>
+    </group>
+    <group name="sales_team">
+      <displayName>Sales_team</displayName>
+    </group>
+    <group name="board_member">
+      <displayName>Board member</displayName>
+    </group>
+    <group name="operations_department">
+      <displayName>Operations Department</displayName>
+    </group>
+  </groups>
+  <memberships>
+    <membership>
+      <userName>User1</userName>
+      <roleName>kyc_team_member</roleName>
+      <groupName>kyc_departnment</groupName>
+    </membership>
+    <membership>
+      <userName>User2</userName>
+      <roleName>sales_team_member</roleName>
+      <groupName>sales_team</groupName>
+    </membership>
+    <membership>
+      <userName>User3</userName>
+      <roleName>board_member</roleName>
+      <groupName>board_member</groupName>
+    </membership>
+    <membership>
+      <userName>User4</userName>
+      <roleName>operations_team_member</roleName>
+      <groupName>operations_department</groupName>
+    </membership>
+  </memberships>
+</organization:Organization>
