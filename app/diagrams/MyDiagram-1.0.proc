@@ -79,9 +79,7 @@
             </operator>
           </operations>
           <operations xmi:type="expression:Operation" xmi:id="_nvQ0wBFHEfC2-O9bywZTJg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_nvQ0wRFHEfC2-O9bywZTJg" name="client_id_proc_var" content="client_id_proc_var" type="TYPE_VARIABLE" returnType="java.lang.Integer">
-              <referencedElements xmi:type="process:Data" xmi:id="_oO8aYBFHEfC2-O9bywZTJg" name="client_id_proc_var" dataType="_sbBDNQ4bEfCJh9kTxj4n4A"/>
-            </leftOperand>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_nvQ0wRFHEfC2-O9bywZTJg" name="" content=""/>
             <rightOperand xmi:type="expression:Expression" xmi:id="_nvQ0whFHEfC2-O9bywZTJg" name="mega_sales_smasher_robotInput?.client_ID" content="mega_sales_smasher_robotInput?.client_ID" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_pQR7kBFHEfC2-O9bywZTJg" name="mega_sales_smasher_robotInput" type="COMPLEX"/>
             </rightOperand>
@@ -182,17 +180,6 @@
               <inputTypes>java.lang.Integer</inputTypes>
             </operator>
           </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_fd-UABFHEfC2-O9bywZTJg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_fd-UARFHEfC2-O9bywZTJg" name="client_id_proc_var" content="client_id_proc_var" type="TYPE_VARIABLE" returnType="java.lang.Integer">
-              <referencedElements xmi:type="process:Data" xmi:id="_gJnSABFHEfC2-O9bywZTJg" name="client_id_proc_var" dataType="_sbBDNQ4bEfCJh9kTxj4n4A"/>
-            </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_fd-UAhFHEfC2-O9bywZTJg" name="client_id_var_input()" content="client_id_var_input" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_HfojMBFVEfC2-O9bywZTJg" name="client_id_var_input" type="INTEGER">
-                <mapping xmi:type="process:ContractInputMapping" xmi:id="_HfojMRFVEfC2-O9bywZTJg"/>
-              </referencedElements>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_fd-UAxFHEfC2-O9bywZTJg" type="ASSIGNMENT"/>
-          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_zhLNlA4bEfCJh9kTxj4n4A" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_zhLNlQ4bEfCJh9kTxj4n4A" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_zhLNlg4bEfCJh9kTxj4n4A" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -209,9 +196,6 @@
               <inputs xmi:type="process:ContractInput" xmi:id="_7VD2pBD6EfCQ8IBfh_N36A" name="client_ID" type="INTEGER" createMode="false"/>
               <inputs xmi:type="process:ContractInput" xmi:id="_7VD2pRD6EfCQ8IBfh_N36A" name="client_name" createMode="false"/>
               <inputs xmi:type="process:ContractInput" xmi:id="_7VD2phD6EfCQ8IBfh_N36A" name="bonus_amount" type="INTEGER" createMode="false"/>
-            </inputs>
-            <inputs xmi:type="process:ContractInput" xmi:id="_Y-o_cBFPEfC2-O9bywZTJg" name="client_id_var_input" type="INTEGER">
-              <mapping xmi:type="process:ContractInputMapping" xmi:id="_Y-o_cRFPEfC2-O9bywZTJg"/>
             </inputs>
           </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_zhLNnA4bEfCJh9kTxj4n4A" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -252,8 +236,8 @@
             <leftOperand xmi:type="expression:Expression" xmi:id="_P3OhBBEAEfCQ8IBfh_N36A" name="ballarat" content="ballarat" type="TYPE_VARIABLE" returnType="com.company.model.Ballarat">
               <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_P3OhBREAEfCQ8IBfh_N36A" documentation="this data object contains information on the client " name="ballarat" dataType="_sbBDOw4bEfCJh9kTxj4n4A" className="com.company.model.Ballarat"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_P3OhBhEAEfCQ8IBfh_N36A" name="client_id_proc_var" content="client_id_proc_var" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
-              <referencedElements xmi:type="process:Data" xmi:id="_y_7QsBFHEfC2-O9bywZTJg" name="client_id_proc_var" dataType="_sbBDNQ4bEfCJh9kTxj4n4A"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_P3OhBhEAEfCQ8IBfh_N36A" name="ballaratInput?.client_ID" content="ballaratInput?.client_ID" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_WeoQgBNiEfCrFPNT0LyVlQ" name="ballaratInput" type="COMPLEX"/>
             </rightOperand>
             <operator xmi:type="expression:Operator" xmi:id="_P3OhCBEAEfCQ8IBfh_N36A" type="JAVA_METHOD" expression="setClient_ID">
               <inputTypes>java.lang.Integer</inputTypes>
@@ -616,9 +600,7 @@
             <leftOperand xmi:type="expression:Expression" xmi:id="_yb1E5BD9EfCQ8IBfh_N36A" name="ballarat" content="ballarat" type="TYPE_VARIABLE" returnType="com.company.model.Ballarat">
               <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_yb1E5RD9EfCQ8IBfh_N36A" documentation="this data object contains information on the client " name="ballarat" dataType="_sbBDOw4bEfCJh9kTxj4n4A" className="com.company.model.Ballarat"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_yb1E5hD9EfCQ8IBfh_N36A" name="client_id_proc_var" content="client_id_proc_var" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
-              <referencedElements xmi:type="process:Data" xmi:id="_1l83wBFHEfC2-O9bywZTJg" name="client_id_proc_var" dataType="_sbBDNQ4bEfCJh9kTxj4n4A"/>
-            </rightOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_yb1E5hD9EfCQ8IBfh_N36A" name="client_id_proc_var" content="     " interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer"/>
             <operator xmi:type="expression:Operator" xmi:id="_yb1E6BD9EfCQ8IBfh_N36A" type="JAVA_METHOD" expression="setClient_ID">
               <inputTypes>java.lang.Integer</inputTypes>
             </operator>
@@ -961,7 +943,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_k8bqZw4eEfCJh9kTxj4n4A" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_k8bqZg4eEfCJh9kTxj4n4A" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_oBq9Cg4eEfCJh9kTxj4n4A">
-            <targetForm xmi:type="expression:Expression" xmi:id="_9YA9gBFVEfC2-O9bywZTJg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_xhDjwBNcEfCrFPNT0LyVlQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_oBq9CQ4eEfCJh9kTxj4n4A"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_oBq9DA4eEfCJh9kTxj4n4A" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -1026,9 +1008,7 @@
             <leftOperand xmi:type="expression:Expression" xmi:id="_1KybSBFGEfC2-O9bywZTJg" name="account_info" content="account_info" type="TYPE_VARIABLE" returnType="com.company.model.AccountInformation">
               <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_1KybSRFGEfC2-O9bywZTJg" name="account_info" dataType="_sbBDOw4bEfCJh9kTxj4n4A" className="com.company.model.AccountInformation"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_1KybShFGEfC2-O9bywZTJg" name="client_id_proc_var" content="client_id_proc_var" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
-              <referencedElements xmi:type="process:Data" xmi:id="_443aABFHEfC2-O9bywZTJg" name="client_id_proc_var" dataType="_sbBDNQ4bEfCJh9kTxj4n4A"/>
-            </rightOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_1KybShFGEfC2-O9bywZTJg" name="client_id_proc_var" content="     " interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer"/>
             <operator xmi:type="expression:Operator" xmi:id="_1KybTBFGEfC2-O9bywZTJg" type="JAVA_METHOD" expression="setAccount_clientID">
               <inputTypes>java.lang.Integer</inputTypes>
             </operator>
@@ -1243,7 +1223,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_y1wAEw4dEfCJh9kTxj4n4A" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_y1wAEg4dEfCJh9kTxj4n4A" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_4WUsug4dEfCJh9kTxj4n4A">
-            <targetForm xmi:type="expression:Expression" xmi:id="_9YA9gRFVEfC2-O9bywZTJg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_xhDjwRNcEfCrFPNT0LyVlQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_4WUsuQ4dEfCJh9kTxj4n4A"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_4WUsvA4dEfCJh9kTxj4n4A" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -1258,7 +1238,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_CMfgmA4eEfCJh9kTxj4n4A" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_CMfglw4eEfCJh9kTxj4n4A" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_CjnAGQ4eEfCJh9kTxj4n4A">
-            <targetForm xmi:type="expression:Expression" xmi:id="_9YA9ghFVEfC2-O9bywZTJg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_xhDjwhNcEfCrFPNT0LyVlQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_CjnAGA4eEfCJh9kTxj4n4A"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_CjnAGw4eEfCJh9kTxj4n4A" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -1273,7 +1253,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_FNFjyA4eEfCJh9kTxj4n4A" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_FNFjxw4eEfCJh9kTxj4n4A" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_HGiYtQ4eEfCJh9kTxj4n4A">
-            <targetForm xmi:type="expression:Expression" xmi:id="_9YA9gxFVEfC2-O9bywZTJg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_xhDjwxNcEfCrFPNT0LyVlQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_HGiYtA4eEfCJh9kTxj4n4A"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_HGiYtw4eEfCJh9kTxj4n4A" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -1293,7 +1273,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_O2cDqA4eEfCJh9kTxj4n4A" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_O2cDpw4eEfCJh9kTxj4n4A" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_PwEaWg4eEfCJh9kTxj4n4A">
-            <targetForm xmi:type="expression:Expression" xmi:id="_9YA9hBFVEfC2-O9bywZTJg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_xhDjxBNcEfCrFPNT0LyVlQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_PwEaWQ4eEfCJh9kTxj4n4A"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_PwEaXA4eEfCJh9kTxj4n4A" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -1318,7 +1298,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_eX-e6A4eEfCJh9kTxj4n4A" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_eX-e5w4eEfCJh9kTxj4n4A" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_f0vX2Q4eEfCJh9kTxj4n4A">
-            <targetForm xmi:type="expression:Expression" xmi:id="_9YA9hRFVEfC2-O9bywZTJg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_xhDjxRNcEfCrFPNT0LyVlQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_f0vX2A4eEfCJh9kTxj4n4A"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_f0vX2w4eEfCJh9kTxj4n4A" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -1347,9 +1327,7 @@
             <leftOperand xmi:type="expression:Expression" xmi:id="_6HAHIhEFEfCQ8IBfh_N36A" name="slipstream" content="slipstream" type="TYPE_VARIABLE" returnType="com.company.model.Slipstream">
               <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_6HAHIxEFEfCQ8IBfh_N36A" documentation="contains information used in the account creation process" name="slipstream" dataType="_sbBDOw4bEfCJh9kTxj4n4A" className="com.company.model.Slipstream"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_6HAHJBEFEfCQ8IBfh_N36A" name="client_id_proc_var" content="client_id_proc_var" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
-              <referencedElements xmi:type="process:Data" xmi:id="_2qKt0BFHEfC2-O9bywZTJg" name="client_id_proc_var" dataType="_sbBDNQ4bEfCJh9kTxj4n4A"/>
-            </rightOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_6HAHJBEFEfCQ8IBfh_N36A" name="client_id_proc_var" content="     " interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer"/>
             <operator xmi:type="expression:Operator" xmi:id="_6HAHJhEFEfCQ8IBfh_N36A" type="JAVA_METHOD" expression="setClient_ID">
               <inputTypes>java.lang.Integer</inputTypes>
             </operator>
@@ -1488,9 +1466,6 @@
       </data>
       <data xmi:type="process:BusinessObjectData" xmi:id="_y9rDYBFGEfC2-O9bywZTJg" name="account_info" dataType="_sbBDOw4bEfCJh9kTxj4n4A" className="com.company.model.AccountInformation">
         <defaultValue xmi:type="expression:Expression" xmi:id="_y9rDYRFGEfC2-O9bywZTJg" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
-      </data>
-      <data xmi:type="process:Data" xmi:id="_dCmdwBFHEfC2-O9bywZTJg" name="client_id_proc_var" dataType="_sbBDNQ4bEfCJh9kTxj4n4A">
-        <defaultValue xmi:type="expression:Expression" xmi:id="_dCmdwRFHEfC2-O9bywZTJg" content="" returnType="java.lang.Integer"/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_sbAcNA4bEfCJh9kTxj4n4A">
         <targetForm xmi:type="expression:Expression" xmi:id="_sbAcNQ4bEfCJh9kTxj4n4A" name="inistantiationform" content="1c274efc-51ce-4f42-a713-2f23a93783e4" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
