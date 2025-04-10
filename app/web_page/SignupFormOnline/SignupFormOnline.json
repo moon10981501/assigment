@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "37e1c8f6-ee11-44a8-b69c-e48f55fbdd92",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1743769975391,
+  "lastUpdate" : 1744261793374,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -459,7 +459,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "{{contract.client_id_var_input}}"
+                          "value" : "mega_sales_smasher_robot.client_ID"
                         },
                         "debounce" : {
                           "type" : "constant",

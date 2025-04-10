@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "8eba0948-72dc-4550-944f-73c663daee0a",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1743734537332,
+  "lastUpdate" : 1744269685963,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -265,7 +265,7 @@
                         },
                         "readOnly" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "label" : {
                           "type" : "interpolation",
@@ -276,7 +276,7 @@
                         },
                         "type" : {
                           "type" : "constant",
-                          "value" : "text"
+                          "value" : "number"
                         },
                         "dimension" : {
                           "type" : "constant",
@@ -355,7 +355,7 @@
                         },
                         "readOnly" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "label" : {
                           "type" : "interpolation",
@@ -449,14 +449,14 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Daily_transaction_limit"
+                          "value" : "Daily transaction limit"
                         },
                         "placeholder" : {
                           "type" : "constant"
                         },
                         "type" : {
                           "type" : "constant",
-                          "value" : "text"
+                          "value" : "number"
                         },
                         "dimension" : {
                           "type" : "constant",
@@ -469,6 +469,32 @@
                         "required" : {
                           "type" : "constant",
                           "value" : false
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "debounce" : {
+                          "type" : "constant",
+                          "value" : 0
+                        },
+                        "min" : {
+                          "type" : "constant"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
                         }
                       },
                       "reference" : "12279a02-3d4e-4d68-a3c7-cbec317edcf0",

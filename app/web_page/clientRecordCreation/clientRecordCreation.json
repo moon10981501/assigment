@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "ecbfe7d4-fc88-46de-bc2e-288d0bb138cc",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1743736911889,
+  "lastUpdate" : 1744271361647,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -262,7 +262,7 @@
                         },
                         "readOnly" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "label" : {
                           "type" : "interpolation",
@@ -281,7 +281,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.slipstreamInput.client_name"
+                          "value" : "slipstream.client_name"
                         },
                         "required" : {
                           "type" : "constant",
@@ -352,7 +352,7 @@
                         },
                         "readOnly" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "label" : {
                           "type" : "interpolation",
@@ -371,7 +371,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.slipstreamInput.client_ID"
+                          "value" : "slipstream.client_ID"
                         },
                         "required" : {
                           "type" : "constant",
@@ -446,7 +446,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.slipstreamInput.hin_exist"
+                          "value" : "slipstreamInput.hin_exist"
                         },
                         "required" : {
                           "type" : "constant",
@@ -514,7 +514,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.slipstreamInput.hin_number"
+                          "value" : "slipstreamInput.hin_number"
                         },
                         "required" : {
                           "type" : "constant",
@@ -585,7 +585,7 @@
                         },
                         "readOnly" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "label" : {
                           "type" : "interpolation",
@@ -596,7 +596,7 @@
                         },
                         "type" : {
                           "type" : "constant",
-                          "value" : "text"
+                          "value" : "number"
                         },
                         "dimension" : {
                           "type" : "constant",
@@ -604,7 +604,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.slipstreamInput.daily_transaction_limit"
+                          "value" : "slipstream.daily_transaction_limit"
                         },
                         "required" : {
                           "type" : "constant",
@@ -679,7 +679,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.slipstreamInput.asset_transfer_requested"
+                          "value" : "slipstreamInput.asset_transfer_requested"
                         },
                         "required" : {
                           "type" : "constant",
@@ -747,7 +747,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.slipstreamInput.client_existing_broker"
+                          "value" : "slipstreamInput.client_existing_broker"
                         },
                         "required" : {
                           "type" : "constant",
@@ -837,7 +837,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.slipstreamInput.current_cash"
+                          "value" : "slipstreamInput.current_cash"
                         },
                         "required" : {
                           "type" : "constant",
@@ -927,7 +927,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.slipstreamInput.broker_ID"
+                          "value" : "slipstreamInput.broker_ID"
                         },
                         "required" : {
                           "type" : "constant",
@@ -1002,7 +1002,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.slipstreamInput.trading_status"
+                          "value" : "slipstreamInput.trading_status"
                         },
                         "required" : {
                           "type" : "constant",
@@ -1197,26 +1197,6 @@
       ],
       "exposed" : false
     },
-    "formInput" : {
-      "type" : "json",
-      "value" : [
-        "{\r",
-        "  \"slipstreamInput\" : {\r",
-        "    \"client_name\" : \"\",\r",
-        "    \"client_ID\" : 0,\r",
-        "    \"hin_exist\" : false,\r",
-        "    \"hin_number\" : \"\",\r",
-        "    \"daily_transaction_limit\" : \"\",\r",
-        "    \"asset_transfer_requested\" : false,\r",
-        "    \"client_existing_broker\" : \"\",\r",
-        "    \"current_cash\" : \"\",\r",
-        "    \"broker_ID\" : 0,\r",
-        "    \"trading_status\" : false\r",
-        "  }\r",
-        "}"
-      ],
-      "exposed" : false
-    },
     "submit_errors_list" : {
       "type" : "expression",
       "value" : [
@@ -1235,9 +1215,24 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "return {",
-        "\tslipstreamInput: $data.formInput.slipstreamInput",
-        "}"
+        "if( $data.slipstream ){\r",
+        "    return {\r",
+        "        // map slipstream variable to expected task contract input\r",
+        "        slipstreamInput: {\r",
+        "            client_name: $data.slipstream.client_name !== undefined ? $data.slipstream.client_name : null,\r",
+        "            client_ID: $data.slipstream.client_ID !== undefined ? $data.slipstream.client_ID : null,\r",
+        "            hin_exist: $data.slipstream.hin_exist !== undefined ? $data.slipstream.hin_exist : null,\r",
+        "            hin_number: $data.slipstream.hin_number !== undefined ? $data.slipstream.hin_number : null,\r",
+        "            daily_transaction_limit: $data.slipstream.daily_transaction_limit !== undefined ? $data.slipstream.daily_transaction_limit : null,\r",
+        "            asset_transfer_requested: $data.slipstream.asset_transfer_requested !== undefined ? $data.slipstream.asset_transfer_requested : null,\r",
+        "            client_existing_broker: $data.slipstream.client_existing_broker !== undefined ? $data.slipstream.client_existing_broker : null,\r",
+        "            current_cash: $data.slipstream.current_cash !== undefined ? $data.slipstream.current_cash : null,\r",
+        "            broker_ID: $data.slipstream.broker_ID !== undefined ? $data.slipstream.broker_ID : null,\r",
+        "            trading_status: $data.slipstream.trading_status !== undefined ? $data.slipstream.trading_status : null,\r",
+        "            account_information: $data.slipstream.account_information !== undefined ? $data.slipstream.account_information : null\r",
+        "        }\r",
+        "    }\r",
+        "}\r"
       ],
       "exposed" : false
     },
@@ -1252,6 +1247,13 @@
       "type" : "urlparameter",
       "value" : [
         "id"
+      ],
+      "exposed" : false
+    },
+    "slipstream" : {
+      "type" : "url",
+      "value" : [
+        "../{{context.slipstream_ref.link}}"
       ],
       "exposed" : false
     }

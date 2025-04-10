@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "b0caf0a4-fe75-4e88-934a-b1a229e08cd8",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1743771908631,
+  "lastUpdate" : 1744268940155,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -13,7 +13,19 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : { },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable"
+          }
+        },
         "reference" : "9f6cdb85-f2a5-46d7-9442-b98809c624d1",
         "hasValidationError" : false,
         "id" : "pbContainer",
@@ -94,7 +106,7 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "this form is used to get to know a client {{ process.client_id_proc_var}}"
+                  "value" : "this form is used to get to know a client"
                 },
                 "alignment" : {
                   "type" : "constant",
@@ -262,7 +274,7 @@
                         },
                         "readOnly" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "label" : {
                           "type" : "interpolation",
@@ -371,7 +383,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "{{process.client_id_proc_var}}"
+                          "value" : "ballarat.client_ID"
                         },
                         "required" : {
                           "type" : "constant",
