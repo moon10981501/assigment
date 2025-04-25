@@ -48,6 +48,17 @@
             <queries/>
             <indexes/>
         </businessObject>
+        <businessObject qualifiedName="com.company.model.ClientTradingInformation">
+            <fields>
+                <field type="INTEGER" length="255" name="approved_limit" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="trading_enabled" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="review_notes" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="enabled_by" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
         <businessObject qualifiedName="com.company.model.MegaSalesSmasherRobot">
             <fields>
                 <field type="LOCALDATE" length="255" name="date_signing" nullable="true" collection="false"/>
@@ -74,6 +85,23 @@
                 <field type="INTEGER" length="255" name="broker_ID" nullable="true" collection="false"/>
                 <field type="BOOLEAN" length="255" name="trading_status" nullable="true" collection="false"/>
                 <relationField type="AGGREGATION" reference="com.company.model.AccountInformation" fetchType="LAZY" name="account_information" nullable="true" collection="true"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.TransferInstruction">
+            <fields>
+                <field type="INTEGER" length="255" name="client_id" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="asset_code" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="quantity" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="from_broker_name" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="to_hin" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="from_hin" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="broker_contact_method" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="consent_to_transfer" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="broker_contacted" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="broker_email" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
