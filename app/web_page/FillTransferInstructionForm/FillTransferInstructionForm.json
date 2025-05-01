@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "3687c9be-df60-4b5f-a26a-5eb386f4c0eb",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1745481501052,
+  "lastUpdate" : 1745971683237,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -333,7 +333,7 @@
                 },
                 "label" : {
                   "type" : "interpolation",
-                  "value" : "Stock/Asset Name"
+                  "value" : "Stock/Asset Names"
                 },
                 "labelPosition" : {
                   "type" : "constant",
@@ -907,18 +907,20 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "return {\r",
-        "  transferInstructionInput: {\r",
-        "    client_id: null,\r",
-        "    asset_code: null,\r",
-        "    quantity: null,\r",
-        "    from_broker_name: null,\r",
-        "    from_hin: null,\r",
-        "    to_hin: null,\r",
-        "    client_confirmation: null,\r",
-        "    transfer_date: null\r",
+        "if ($data.transfer_instruction) {\r",
+        "  return {\r",
+        "    transfer_instructionInput: {\r",
+        "      client_id: $data.transfer_instruction.client_id !== undefined ? $data.transfer_instruction.client_id : null,\r",
+        "      asset_code: $data.transfer_instruction.asset_code !== undefined ? $data.transfer_instruction.asset_code : null,\r",
+        "      quantity: $data.transfer_instruction.quantity !== undefined ? $data.transfer_instruction.quantity : null,\r",
+        "      from_broker_name: $data.transfer_instruction.from_broker_name !== undefined ? $data.transfer_instruction.from_broker_name : null,\r",
+        "      to_hin: $data.transfer_instruction.to_hin !== undefined ? $data.transfer_instruction.to_hin : null,\r",
+        "      from_hin: $data.transfer_instruction.from_hin !== undefined ? $data.transfer_instruction.from_hin : null,\r",
+        "      client_confirmation: $data.transfer_instruction.client_confirmation !== undefined ? $data.transfer_instruction.client_confirmation : null,\r",
+        "      consent_to_transfer: $data.transfer_instruction.consent_to_transfer !== undefined ? $data.transfer_instruction.consent_to_transfer : null\r",
+        "    }\r",
         "  }\r",
-        "}"
+        "}\r"
       ],
       "exposed" : false
     },
